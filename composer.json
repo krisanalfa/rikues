@@ -1,0 +1,21 @@
+{
+    "name": "krisanalfa/rikues",
+    "description": "A simple cURL library for PHP.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Krisan Alfa Timur",
+            "email": "krisan47@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload" : {
+        "psr-4": {
+            "Rikues\\": "src/Rikues"
+        }
+    },
+    "require-dev": {
+        "illuminate/support": "^5.2",
+        "symfony/var-dumper": "^3.0"
+    }
+}
