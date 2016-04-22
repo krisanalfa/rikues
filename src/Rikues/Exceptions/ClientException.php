@@ -4,14 +4,11 @@ namespace Rikues\Exceptions;
 
 use Exception;
 
+/**
+ * Client Exception
+ *
+ * @author Krisan Alfa Timur <krisan47@gmail.com>
+ */
 class ClientException extends Exception
 {
-    public $response;
-
-    public function __construct($message = '', $code = 0, $response = '', Exception $previous = null)
-    {
-        $this->response = $response;
-
-        parent::__construct($message, $code, $previous);
-    }
 }

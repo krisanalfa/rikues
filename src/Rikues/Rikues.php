@@ -5,6 +5,11 @@ namespace Rikues;
 use Rikues\Exceptions\ClientException;
 use Rikues\Exceptions\ServerException;
 
+/**
+ * Rikues is a simple cURL library with serialization support.
+ *
+ * @author Krisan Alfa Timur <krisan47@gmail.com>
+ */
 class Rikues
 {
     /**
@@ -275,5 +280,9 @@ class Rikues
         $this->client = curl_init($this->uri);
 
         $this->bootstrapCurl();
+
+        foreach ($this->options as $option => $value) {
+            curl_setopt($this->client, $option, $value);
+        }
     }
 }
