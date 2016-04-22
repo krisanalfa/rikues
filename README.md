@@ -72,3 +72,20 @@ try {
     $serverResponse = $e->response;
 }
 ```
+
+### Working With Serialization
+
+```php
+$rikues = new Rikues("https://httpbin.org/post");
+
+$rikues->withParam('foo', 'bar');
+$rikues->withParam('baz', 'quux');
+
+$rikues->withMethod('POST');
+
+$serialized = serialize($rikues);
+
+$unserialized = unserialize($serialized);
+
+$response = $unserialized->send();
+```
